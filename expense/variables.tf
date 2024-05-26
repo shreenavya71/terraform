@@ -1,3 +1,4 @@
+# ec2 variables
 variable "instance_names" {
     type = list
     default = ["db","backend","frontend"]  
@@ -23,6 +24,7 @@ variable "common_tags" {
     }
 }
 
+# security group variables
 variable "sg_name" {
     default = "allow_ssh" 
 }
@@ -42,4 +44,14 @@ variable "protocol" {
 variable "allowed_cidr" {
     type = list(string)
     default = ["0.0.0.0/0"]
+}
+
+
+# R53 variable
+variable "zone_id" {
+    default = "Z03429092AAIYV87MIX0H"
+}
+
+variable "domain_name" {
+    default = "devopsnavyahome.online"
 }
